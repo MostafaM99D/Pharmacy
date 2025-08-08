@@ -115,7 +115,11 @@ namespace BLL
 
         }
 
+        public static bool IsExist(string MedicineName)
+        {
+            return clsMedicinesData.IsExist(MedicineName);
 
+        }
     }
 
 

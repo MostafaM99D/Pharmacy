@@ -126,6 +126,12 @@
       <DependentUpon>frmAdminstratorDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Global\clsGlobal.cs" />
+    <Compile Include="HelperCtrls\ctrlMedicineDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelperCtrls\ctrlMedicineDetailsWithFilter.Designer.cs">
+      <DependentUpon>ctrlMedicineDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelperCtrls\ctrlPersonDetailsWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +149,18 @@
     </Compile>
     <Compile Include="Medicines\frmAddEditCategory.Designer.cs">
       <DependentUpon>frmAddEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicines\frmAddEditInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicines\frmAddEditInventory.Designer.cs">
+      <DependentUpon>frmAddEditInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicines\frmAddEditMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicines\frmAddEditMedicine.Designer.cs">
+      <DependentUpon>frmAddEditMedicine.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmAddEditPerson.cs">
       <SubType>Form</SubType>
@@ -224,6 +242,9 @@
     <EmbeddedResource Include="Administrator\frmAdminstratorDashboard.resx">
       <DependentUpon>frmAdminstratorDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HelperCtrls\ctrlMedicineDetailsWithFilter.resx">
+      <DependentUpon>ctrlMedicineDetailsWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HelperCtrls\ctrlPersonDetailsWithFilter.resx">
       <DependentUpon>ctrlPersonDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +253,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Medicines\frmAddEditCategory.resx">
       <DependentUpon>frmAddEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicines\frmAddEditInventory.resx">
+      <DependentUpon>frmAddEditInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicines\frmAddEditMedicine.resx">
+      <DependentUpon>frmAddEditMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmAddEditPerson.resx">
       <DependentUpon>frmAddEditPerson.cs</DependentUpon>
@@ -514,6 +541,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\decline2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-post1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-post2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

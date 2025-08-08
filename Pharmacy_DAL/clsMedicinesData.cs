@@ -271,11 +271,47 @@ namespace Pharmacy_DAL
 
             return IsFound;
         }
+        public static bool IsExist(string MedicineName)
+        {
+            bool IsFound = false;
 
+            using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "select found=1 from Medicines where MedicineName=@MedicineName; ";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MedicineName", MedicineName);
+                    try
+                    {
+
+                        conn.Open();
+                        object obj = cmd.ExecuteScalar();
+                        if (obj != null)
+                            IsFound = true;
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        throw new Exception("Error.", ex);
+
+                        //IsFound=false;
+
+                    }
+
+
+                }
+
+
+            }
+
+
+            return IsFound;
+        }
 
 
 
     }
-
 
 }

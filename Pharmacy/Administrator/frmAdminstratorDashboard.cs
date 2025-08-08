@@ -71,6 +71,7 @@ namespace Pharmacy.Administrator
         {
             ctrlMedicinesScreen1.Visible = true;
             ctrlMedicinesScreen1.BringToFront();
+            ctrlMedicinesScreen1.LoadData();
         }
 
         private void btnSuppliersManagement_Click(object sender, EventArgs e)

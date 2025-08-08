@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label12 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -115,6 +116,26 @@
             this.label12.TabIndex = 42;
             this.label12.Text = "Filter By Name :";
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.RoyalBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Italic);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::Pharmacy.Properties.Resources.add_post1;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(847, 794);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(194, 55);
+            this.guna2Button1.TabIndex = 47;
+            this.guna2Button1.Text = "Add Med Inv";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // guna2Button3
             // 
             this.guna2Button3.BorderRadius = 20;
@@ -126,13 +147,14 @@
             this.guna2Button3.FillColor = System.Drawing.Color.RoyalBlue;
             this.guna2Button3.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Italic);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Image = global::Pharmacy.Properties.Resources.new_user;
+            this.guna2Button3.Image = global::Pharmacy.Properties.Resources.add_post;
             this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Location = new System.Drawing.Point(1155, 794);
+            this.guna2Button3.Location = new System.Drawing.Point(1050, 794);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(143, 55);
+            this.guna2Button3.Size = new System.Drawing.Size(194, 55);
             this.guna2Button3.TabIndex = 46;
             this.guna2Button3.Text = "Add New";
+            this.guna2Button3.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // btnDelete
             // 
@@ -147,11 +169,12 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::Pharmacy.Properties.Resources.bin;
             this.btnDelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDelete.Location = new System.Drawing.Point(1304, 794);
+            this.btnDelete.Location = new System.Drawing.Point(1253, 794);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(143, 55);
+            this.btnDelete.Size = new System.Drawing.Size(194, 55);
             this.btnDelete.TabIndex = 45;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtSearch
             // 
@@ -173,12 +196,14 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(353, 36);
             this.txtSearch.TabIndex = 43;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // ctrlMedicinesScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvList);
@@ -187,6 +212,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ctrlMedicinesScreen";
             this.Size = new System.Drawing.Size(1490, 1080);
+            this.Load += new System.EventHandler(this.ctrlMedicinesScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,5 +227,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvList;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

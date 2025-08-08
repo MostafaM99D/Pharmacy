@@ -104,8 +104,8 @@ namespace Pharmacy.People
                         MessageBox.Show($"person with id= {_Person.PersonID} added successfully.", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show($"person with id= {_Person.PersonID} updated successfully.", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     _PersonID = _Person.PersonID;
+                    lblPersonID.Text = _PersonID.ToString();
                     lblHeader.Text = $"UPDATE PERSON WITH [{_PersonID}]";
                     txtAddress.Text = _Person.Address;
                     txtEmail.Text = _Person.Email;

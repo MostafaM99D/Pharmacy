@@ -133,7 +133,7 @@ namespace Pharmacy.Users
                     this._UserID = _User.UserID;
                     MessageBox.Show($"user with [{_UserID}] saved successfully.", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     lblHeader.Text = $"UPDATING USER WITH [{_UserID}]";
-
+                    lblUserID.Text=_User.UserID.ToString();
 
                 }
                 else
@@ -161,6 +161,11 @@ namespace Pharmacy.Users
             else
                 pbUsernameCheck.Image = Properties.Resources.check__1_;
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
