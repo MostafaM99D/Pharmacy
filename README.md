@@ -30,7 +30,7 @@ The system is developed in a modular fashion, covering essential functionalities
 
 ---
 
-* ### **Product & Inventory Management (Upcoming)**
+* ### **Product & Inventory Management (Completed)**
 
   * Comprehensive view of medicines and inventory details (quantities, expiry dates, purchase/sale prices).
 
